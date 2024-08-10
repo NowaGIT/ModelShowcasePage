@@ -55,19 +55,25 @@ model2.expression();
 </body>
 
 <style>
-    body {
-      margin: 0;
-      padding: 0; 
-    overflow: hidden;
-   background-color: #fff1bf;/* Color de fondo */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Elimina el scroll */
+  background-color: #FFF1BF; /* Color de fondo */
+}
 
-    }
-      html {
- 
-    }
-     .container {
-      /* Ancho fijo del contenedor */
-      margin: 0 auto; /* Centra el contenedor horizontalmente */
-      overflow-x: hidden; /* Elimina el desbordamiento horizontal dentro del contenedor */
-    }
+.container {
+  position: relative;
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el canvas */
+  background-color: #FFF1BF; /* Asegúrate de que el fondo del canvas coincida con el fondo de la página */
+}
   </style>
