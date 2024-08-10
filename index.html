@@ -31,7 +31,7 @@ const scaleX = (innerWidth) / model.width;
 const scaleY = (innerHeight) / model.height;
 // fit the window
 model.scale.set(Math.min(scaleX, scaleY));
-model.y = innerHeight * 0.1;
+model.y = innerHeight*0;
 
 });
 const model2 = models[0];
@@ -75,6 +75,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  transform: translate(0, 0);
   background-color: #FFF1BF; /* Asegúrate de que el fondo del canvas coincida con el fondo de la página */
 }
   </style>
