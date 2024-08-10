@@ -1,4 +1,5 @@
 <body>
+  <div class="container">
 <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script>
@@ -35,7 +36,7 @@ model.y = innerHeight * 0.1;
 });
 const model2 = models[0];
 
-model2.x = (innerWidth - model2.width) / 2;
+model2.x = (innerWidth - model2.width)/2;
 
 // handle tapping
 model2.on("hit", (hitAreas) => {
@@ -50,6 +51,7 @@ model2.expression();
 })();
 
 </script>
+    </div>
 </body>
 
 <style>
@@ -58,16 +60,14 @@ model2.expression();
       padding: 0; 
     overflow: hidden;
    background-color: #fff1bf;/* Color de fondo */
-    max-width: 500px;
+
     }
       html {
-      height: 100%; /* Asegura que el html ocupe toda la altura */
-      overflow: hidden; /* Oculta las barras de desplazamiento en el html */
-          background-color: #fff1bf;
-          max-width: 500px;
+ 
     }
-    #canvas{
-        max-width: 500px;
+     .container {
+      /* Ancho fijo del contenedor */
+      margin: 0 auto; /* Centra el contenedor horizontalmente */
+      overflow-x: hidden; /* Elimina el desbordamiento horizontal dentro del contenedor */
     }
-   
   </style>
