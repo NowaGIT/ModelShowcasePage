@@ -18,7 +18,7 @@ const app = new PIXI.Application({
 view: document.getElementById("canvas"),
 autoStart: true,
 resizeTo: window,
-backgroundColor: 0x333333
+
 });
 const models = await Promise.all([
 live2d.Live2DModel.from(cubism2Model)
@@ -56,6 +56,7 @@ model2.expression();
       margin: 0;
       padding: 0;
       background: transparent; /* Fondo transparente */
+        overflow: hidden;
     }
       html {
       height: 100%; /* Asegura que el html ocupe toda la altura */
